@@ -12,6 +12,14 @@ const view = new NotesView(app, {
   onNoteSelect() {
     console.log('ノートが選択されなました');
   },
+  onNoteAdd() {
+    console.log('ノートが追加されました');
+  },
+  onNoteEdit(newTitle, newBody) {
+    console.log(newTitle);
+    console.log(newBody);
+  },
 });
+//newTitleとnewBodyの正体は、NotesViewクラスのinputTitle（タイトル入力欄）と inputBody（本文入力欄）の値を.trim()して取得したもの。
 
 console.log(NotesAPI.getAllNotes());
