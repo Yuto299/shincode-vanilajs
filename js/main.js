@@ -23,3 +23,8 @@ const view = new NotesView(app, {
 //newTitleとnewBodyの正体は、NotesViewクラスのinputTitle（タイトル入力欄）と inputBody（本文入力欄）の値を.trim()して取得したもの。
 
 console.log(NotesAPI.getAllNotes());
+
+const notes = NotesAPI.getAllNotes();
+
+//サイドバーにメモを全て表示
+view.updateNoteList(notes);
