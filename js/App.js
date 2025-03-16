@@ -44,8 +44,13 @@ export default class App {
         console.log('ノートが追加されました。');
       },
       onNoteEdit: (title, body) => {
-        console.log(title);
-        console.log(body);
+        NotesAPI.saveNote({
+          id: this.activeNote.id,
+          title: title,
+          body: body,
+        });
+
+        this._refreshNotes();
       },
       onNoteDelete: (noteId) => {
         console.log(noteId + 'のノートが削除されました。');
