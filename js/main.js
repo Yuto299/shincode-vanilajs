@@ -9,8 +9,8 @@ import NotesView from './NotesView.js';
 
 const app = document.getElementById('app');
 const view = new NotesView(app, {
-  onNoteSelect() {
-    console.log('ノートが選択されなました');
+  onNoteSelect(id) {
+    console.log(id + 'ノートが選択されました');
   },
   onNoteAdd() {
     console.log('ノートが追加されました');
@@ -18,6 +18,9 @@ const view = new NotesView(app, {
   onNoteEdit(newTitle, newBody) {
     console.log(newTitle);
     console.log(newBody);
+  },
+  onNoteDelete(id) {
+    console.log(id + 'ノートが削除されました');
   },
 });
 //newTitleとnewBodyの正体は、NotesViewクラスのinputTitle（タイトル入力欄）と inputBody（本文入力欄）の値を.trim()して取得したもの。
