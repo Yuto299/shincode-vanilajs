@@ -22,6 +22,8 @@ export default class NotesView {
       <textarea class="notesBody" placeholder="ここに本文を追加"></textarea>
     </div>
     `;
+    //innerHTMLは、指定した要素の中身を取得するメソッド
+    // console.log(app.innerHTML);
 
     const btnAddNote = this.root.querySelector('.notesAdd');
     const inputTitle = this.root.querySelector('.notesTitle');
