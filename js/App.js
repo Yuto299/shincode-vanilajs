@@ -37,6 +37,8 @@ export default class App {
     return {
       onNoteSelect: (noteId) => {
         console.log(noteId + 'のノートが選択されました。');
+        const selectedNote = this.notes.find((note) => note.id == noteId);
+        this._setActiveNote(selectedNote);
       },
       onNoteAdd: () => {
         console.log('ノートが追加されました。');
