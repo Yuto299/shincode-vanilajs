@@ -31,3 +31,5 @@ const notes = NotesAPI.getAllNotes();
 
 //サイドバーにメモを全て表示
 view.updateNoteList(notes);
+//プレビューにメモ内容を表示する
+view.updateActiveNote(notes[0]);
